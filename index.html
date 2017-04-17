@@ -6,15 +6,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0">
     <title>Title</title>
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
 <div id="app">
 <!--<h2>{{title}}</h2>-->
-    <li v-for="item in productList">
+    <li v-for="(item,index) in productList">
         <div >产品名称：{{item.productName}}</div>
         <dd v-for="part in item.parts" v-text="part.partsName"></dd>
-        <div>价格：{{item.productPrice}}</div>
-
+        <div>价格：{{item.productPrice+"--------------------"+index}}</div>
+        <div>数量：{{item.productQuentity}}</div>
+<div>金额：{{item.productPrice*item.productQuentity}}</div>
+        <!--<img src="item.productImage" alt="">-->
+        <!--<img src="{{item.productImage}}" alt="">-->
+        <img v-bind:src="item.productImage" alt="">
     </li>
 
 </div>
