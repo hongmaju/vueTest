@@ -47,6 +47,16 @@ formatMoney:function (value) {
                 }
             }
 
+        },
+        selectedProduct:function (item) {
+            //alert("1");
+            if(typeof item.checked=="undefined"){
+                //Vue.set(item,"checked",true);//全局注册checked
+                this.$set(item,"checked",true);//局部注册checked
+            }
+            else {
+                item.checked=!item.checked;
+            }
         }
     }
 

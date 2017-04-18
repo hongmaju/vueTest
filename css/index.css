@@ -6,3 +6,18 @@ a {
     color: #000;
     text-decoration: none;
 }
+.check{
+    background: #EE7A23;
+    border-color: #EE7A23;
+
+}
+.item-check-btn {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
