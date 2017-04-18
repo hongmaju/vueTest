@@ -6,7 +6,8 @@ new Vue({
     data:{
         // title:"hello vue"
         totalMoney:0,
-        productList:[]
+        productList:[],
+        checkAllFlag:false
     },
     filters:{
 formatMoney:function (value) {
@@ -57,6 +58,9 @@ formatMoney:function (value) {
             else {
                 item.checked=!item.checked;
             }
+        },
+        checkAll:function () {
+            
         }
     }
 

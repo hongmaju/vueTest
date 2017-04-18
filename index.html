@@ -29,8 +29,13 @@
         <a href="javascript:;" class="item-check-btn" v-bind:class="{'check':item.checked}" @click="selectedProduct(item);">
         </a>
     </li>
-
+    <div>
+        <!--<span class="item-check-btn" :class="{'check':checkAllFlag}" @click="checkAllFlag=true"></span>-->
+        <!--注意不要将true写成ture，还要将div写到vue的作用范围内的div中，即#app这个div中-->
+        <span class="item-check-btn" :class="{'check':checkAllFlag}" @click="checkAll();"></span>
+    </div>
 </div>
+
 <script src="js/lib/vue.min.js"></script>
 <script src="js/lib/vue-resource.min.js"></script>
 <script src="js/cart.js"></script>
