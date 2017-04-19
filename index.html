@@ -32,7 +32,11 @@
     <div>
         <!--<span class="item-check-btn" :class="{'check':checkAllFlag}" @click="checkAllFlag=true"></span>-->
         <!--注意不要将true写成ture，还要将div写到vue的作用范围内的div中，即#app这个div中-->
-        <span class="item-check-btn" :class="{'check':checkAllFlag}" @click="checkAll();"></span>
+        <span class="item-check-btn" :class="{'check':checkAllFlag}" @click="checkAll(true);"></span>
+        <a href="" class="item-del-btn" @click="checkAll(false);">取消全选</a>
+        <div class="item-total">
+            总金额 <span class="total-price">{{totalCheckMoney| money("元")}}</span>
+        </div>
     </div>
 </div>
 
