@@ -8,7 +8,9 @@ new Vue({
         totalMoney:0,
         productList:[],
         checkAllFlag:false,
-        totalCheckMoney:0
+        totalCheckMoney:0,
+        delFlag:false,
+        curProduct:''
     },
     filters:{
 formatMoney:function (value) {
@@ -81,6 +83,16 @@ formatMoney:function (value) {
                     _this.totalCheckMoney+=item.productPrice*item.productQuentity;
                 }
             })
+        },
+        delConfirm:function (item) {
+            this.delFlag=true;
+            this.curProduct=item;
+        },
+        delProduct:function () {
+            var index=this.productList.indexOf(this.curProduct);
+            this.productList.splice(index,1);
+            this.delFlag=false;
+
         }
     }
 
