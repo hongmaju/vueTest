@@ -21,3 +21,84 @@ a {
     vertical-align: middle;
     cursor: pointer;
 }
+.md-modal-transition .md-modal-inner {
+    background: #fff;
+
+}
+.md-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 535px;
+    height: auto;
+    -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+    visibility: hidden;
+    z-index: 201;
+}
+.md-show {
+    visibility: visible;
+}
+.md-modal .md-close {
+    position: absolute;
+    top: 7px;
+    right: 7px;
+    width: 34px;
+    height: 34px;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    text-indent: -8000px;
+}
+.md-modal .md-close:before, .md-modal .md-close:after {
+    position: absolute;
+    top: 16px;
+    left: -4px;
+    content: "";
+    width: 44px;
+    height: 3px;
+    background: #605f5f;
+    -webkit-transition: -webkit-transform .5s ease-out;
+    transition: -webkit-transform .5s ease-out;
+    transition: transform .5s ease-out;
+    transition: transform .5s ease-out,-webkit-transform .5s ease-out;
+}
+.md-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 200;
+}
+.md-modal .confirm-tips, .md-modal .alert-tips {
+    font-size: 14px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.md-modal .confirm-tips {
+    min-height: 5.65em;
+}
+.md-modal .btn-wrap {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 0;
+}
+.md-modal .btn-wrap .btn {
+    width: 45%;
+    min-width: 80px;
+    margin: 0 2.5%;
+}
+
+.btn--m {
+    height: 45px;
+    line-height: 45px;
+}
+.btn--red {
+    background-color: #d1434a;
+    border-color: #d1434a;
+    color: #fff;
+}
