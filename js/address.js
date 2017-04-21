@@ -5,7 +5,9 @@ new Vue({
     el:".container",
     data:{
         limitNum:3,
-    addressList:[]
+        addressList:[],
+        currentIndex:0,
+        shippingMethod:1
 },
 mounted:function () {
     this.$nextTick(function(){
@@ -33,7 +35,19 @@ getAddressList:function(){
         ,
     loadMore:function () {
         this.limitNum=this.addressList.length;
-    }
+    },
+        setDefault:function (addressId) {
+            this.addressList.forEach(function (address,index) {
+                if(address.addressId==addressId)
+                {
+                    address.isDefault=true;
+                }
+                else{
+                    address.isDefault=false;
+                }
+            })
+
+        }
 
 }
 });
