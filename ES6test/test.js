@@ -221,10 +221,146 @@
 // test(obj);
 
 
-var obj={b:2}
-function test({a=10, b}) {
-    console.log("a:",a);
-    console.log("b:",b);
-}
-test(obj);
+// var obj={b:2}
+// function test({a=10, b}) {
+//     console.log("a:",a);
+//     console.log("b:",b);
+// }
+// test(obj);
 
+// 新增字符串的方法
+// console.log("Yo".indexOf("Y")!=-1);
+// console.log("Yo".includes("Y"));
+
+// console.log("Yo".startsWith("Y"));
+// console.log("Yo".endsWith("o"));
+
+// console.log("Yo ".repeat(3));
+
+// 模板字符串
+//     let title="野外基地";
+// var tpl="div"+"<span>"+title+"</span>"+"</div>";
+// let tplw=`
+// <div>
+// <span>${title}</span>
+// </div>
+// `
+// console.log("tpl:",tpl);
+// console.log("tplw:",tplw);
+
+
+// let title="野外基地";
+// let tplw=`
+// <div>
+// <span>${title+`<span>${1234}2016</span>`}</span>
+// </div>
+// `
+// console.log("tplw:",tplw);
+
+// Symbol
+// undefined
+// null
+// Boolean
+// String
+// Number
+// Object
+
+// let c=Symbol("这是一个Symbol");
+// let a=Symbol();
+// let b=Symbol();
+// console.log("a:",a);
+// console.log("b:",b);
+// console.log("c:",c);
+// console.log(a===b);
+
+// let name=Symbol();
+// {
+//     var person={};
+//     person[name]="file1";
+//     console.log("person[name]:",person[name]);
+// }
+//
+// {
+//     let name=Symbol();
+//     person[name]="file2";
+//     console.log("person[name]:",person[name]);
+//     console.log("person:",person);
+// }
+// console.log("person[name]:",person[name]);
+
+//
+// var user={};
+// user.fname="bob";
+// user.lname="wood";
+// var full_name=user.fname+" "+user.lname;
+// console.log("fullname:",full_name);
+
+// var user={
+//     full_name:function () {
+//         return this.fname+" "+this.lname;
+//     }
+// };
+// user.fname="bob";
+// user.lname="wood";
+//
+// console.log("user.full_name:",user.full_name());
+
+
+// var user={
+//     full_name:function () {
+//         return this.fname+" "+this.lname;
+//     }
+// };
+// user.fname="bob";
+// user.lname="wood";
+//
+// console.log("user.fullname:",user.full_name);
+
+
+
+// var user=new Proxy({},{
+//     get:function (obj,prop) {
+//         if(prop=="full_name")
+//             return obj.fname+' '+obj.lname;
+//     }
+//
+// });
+// user.fname="bob";
+// user.lname="wood";
+// console.log("user.full_name:",user.full_name);
+// console.log("user.age:",user.age);
+
+// var user=new Proxy({},{
+//     get:function (obj,prop) {
+//         switch (prop){
+//             case 'full_name':
+//                 return obj.fname+' '+obj.lname;
+//
+//         }
+//
+//     }
+//     ,
+//     set:function (obj, prop) {
+//
+//
+//     }
+//
+// });
+// user.fname="bob";
+// user.lname="wood";
+// console.log("user.full_name:",user.full_name);
+// console.log("user.age:",user.age);
+
+var arr=[1,2,3,3];
+console.log("arr:",arr);
+var s=new Set([1,2,3,3]);
+console.log("s:",s);
+console.log("s.sise:",s.size);
+s.add(4);
+console.log("s:",s);
+s.delete(2);
+console.log("s:",s);
+console.log("s.has(5):",s.has(5));
+console.log("s.has(3):",s.has(3));
+s.clear();
+console.log("s:",s);
